@@ -1,0 +1,15 @@
+{
+    "otp": {
+        "otp": {
+            "label": "otp",
+            "placeholder": "enter code ",
+            "errors": {
+                "required": "otp is required",
+                "pattern": {
+                    "value": 6,
+                    "message": "enter 6 digit code sent to your register number"
+                }
+            }
+        }
+    }
+}
