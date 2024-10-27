@@ -1,12 +1,26 @@
 import { Text, View } from "react-native";
-import OtpScreen from "./screens/otp-screen";
+import BottomSheetScreen from "./screens/bottom-sheet";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { PortalProvider } from '@gorhom/portal'
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 
 const App = () => {
 
     return (
-        <View>
-            <OtpScreen/>
-        </View>
+        // <View>
+        //     <BottomSheetScreen/>
+        // </View>
+
+        /**
+         * If you are useing bottom sheet 
+         */
+        <GestureHandlerRootView>
+            <PortalProvider>
+                <BottomSheetModalProvider>
+                    <BottomSheetScreen />
+                </BottomSheetModalProvider>
+            </PortalProvider>
+        </GestureHandlerRootView>
     );
 }
 
